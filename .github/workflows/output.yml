@@ -1,0 +1,11 @@
+name: Context Tester
+on:
+    [workflow_dispatch, push] # Workflow triggers
+
+jobs:
+  test: # Job Name
+    runs-on: ubuntu-latest # Runner environment
+    steps:
+        - name: Output Context
+          run: |
+            echo "${{ github }}"
