@@ -1,6 +1,6 @@
 name: Context Tester
 on:
-    [workflow_dispatch, push] # Workflow triggers
+    [workflow_dispatch] # Workflow triggers
 
 jobs:
   test: # Job Name
