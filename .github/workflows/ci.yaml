@@ -30,3 +30,12 @@ jobs:
       - name: Run Pytest
         run: |
           pytest
+
+  deploy: # Job Name
+    runs-on: ubuntu-latest # Runner environment
+    needs: test # This job will run after the 'test' job is successful
+    steps:
+      - name: Sample Deployment Step
+        run: |
+          echo "Deploying application..."
+          # Add your deployment commands here
