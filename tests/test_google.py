@@ -1,8 +1,7 @@
 import re # For Regular expression (Regex)
-import pytest
 from playwright.sync_api import expect
 
 def test_google_search(page):
-    page.goto("https://google.com")
+    page.goto("http://127.0.0.1:8000/")
 
-    expect(page).to_have_title(re.compile("Google", re.IGNORECASE))
+    expect(page).to_have_title(re.compile("PGH - STEP", re.IGNORECASE))
