@@ -1,15 +1,6 @@
 import pytest
-from playwright.sync_api import sync_playwright
-
-@pytest.fixture(scope="session")
-def browser():
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        yield browser
-        browser.close()
+from pages.login_page import LogInPage
 
 @pytest.fixture
-def page(browser):
-    page = browser.new_page()
-    yield page
-    page.close()
+def login_page(page):
+    return LogInPage(page)
