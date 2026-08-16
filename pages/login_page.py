@@ -5,8 +5,8 @@ class LoginPage:
         self.password_input = page.get_by_placeholder("Password")
         self.login_btn      = page.get_by_role("button", name="Login")
 
-    def goto(page):
-        page.goto("https://www.saucedemo.com/")
+    def page_goto(self):
+        self.page.goto('https://www.saucedemo.com/')
 
     def login(self, username, password):
         self.username_input.fill(username)
