@@ -1,6 +1,6 @@
 import pytest
-from pages.login_page import LogInPage
+from pages.login_page import LoginPage
 
 @pytest.fixture
 def login_page(page):
-    return LogInPage(page)
+    return LoginPage(page)
